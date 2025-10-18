@@ -1,5 +1,5 @@
 import Card from '@mui/material/Card';
-import { Grid, Typography, Box, Link } from '@mui/material';
+import { Typography, Box, Link } from '@mui/material';
 import { grey, pink } from '@mui/material/colors';
 
 export interface CardProps{
@@ -8,9 +8,9 @@ export interface CardProps{
 }
 
 export const CardDisplay=({title, date}: CardProps)=>{
-return(
-    <Grid>
-    <Card sx={{p: 2, borderRadius: 8, backgroundColor: pink[100],  border:2 ,borderColor: pink[600], boxShadow: 'none', height:200, width: 300,  display: "flex",
+return( 
+        
+        <Card sx={{p: 2, borderRadius: 8, backgroundColor: pink[100],  border:2 ,borderColor: pink[600], boxShadow: 'none', height:200, width: 300,  display: "flex",
           flexDirection: "column", justifyContent: "space-between"}}>
             <Typography variant='h4' sx={{color: 'grey.100', fontStyle: 'italic', height: 180}}>{title}</Typography>    
         <Box display='flex' justifyContent="flex-end" gap={2} paddingRight={2}>
@@ -19,6 +19,6 @@ return(
             <Link sx={{ textDecoration: "none", cursor: "pointer" }}>Delete</Link>
         </Box>
     </Card>
-</Grid>
+
 )
 }
