@@ -1,8 +1,8 @@
-import { PageContainer } from "./components/PageContainer/PageContainer"
+import { CardContainer } from "./components/CardContainer/CardContainer"
 
 function App() {
   return <>
-    <PageContainer />
+    <CardContainer />
   </>
 }
 

@@ -1,13 +1,12 @@
-// import { Box, Grid } from "@mui/material"
-// import { CardDisplay } from "./CardDisplay"
+import { grey } from "@mui/material/colors"
+import { Box, Typography } from "@mui/material"
+import { AddTodo } from "../AddTodo/AddTodo"
 
-// export const CardContainer=()=>{
-
-//     return (
-//         <Box display='flex' sx={{padding: '10px'}}> 
-//             <Grid > 
-//                 <CardDisplay title="This is a title" date='5/10/2025' />
-//             </Grid>
-//         </Box>
-//     )
-// }
+export const CardContainer=()=>{
+return (
+        <Box  sx={{backgroundColor: '#FFE2d8', width: "100vw", minHeight: '100vh' , boxSizing: 'border-box', flexWrap: "wrap", justifyContent:'center'}} >
+        <Typography variant="h1" sx={{display: 'flex', padding: 5, justifyContent: 'center', color: grey[400]}}> Your Todo List</Typography>
+        <AddTodo />
+        </Box>  
+    )
+}
