@@ -1,6 +1,7 @@
 import { grey } from "@mui/material/colors"
 import { Box, Typography } from "@mui/material"
-import { AddTodo } from "../AddTodo/AddTodo"
+import { AddTodo } from "../TodoFunctions/TodoFunctions"
+import { ViewModal } from "./ViewModal"
 
 export const CardContainer=()=>{
 return (

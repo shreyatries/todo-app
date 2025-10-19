@@ -4,10 +4,13 @@ import { grey, pink } from '@mui/material/colors';
 
 export interface CardProps{
     title: string,
-    date: string
+    date: string,
+    onDelete: () => void
+    onEdit: () => void
 }
 
-export const CardDisplay=({title, date}: CardProps)=>{
+export const CardDisplay=({title, date, onDelete, onEdit}: CardProps)=>{
+    
 return( 
         
         <Card sx={{p: 2, borderRadius: 8, backgroundColor: pink[100],  border:2 ,borderColor: pink[600], boxShadow: 'none', height:200, width: 300,  display: "flex",
@@ -15,8 +18,8 @@ return(
             <Typography variant='h4' sx={{color: 'grey.100', fontStyle: 'italic', height: 180}}>{title}</Typography>    
         <Box display='flex' justifyContent="flex-end" gap={2} paddingRight={2}>
             <Typography variant='body2' sx={{color: grey[600], paddingRight: 10}}>{date}</Typography>
-            <Link sx={{ textDecoration: "none", cursor: "pointer" }}>Edit</Link>
-            <Link sx={{ textDecoration: "none", cursor: "pointer" }}>Delete</Link>
+            <Link onClick={onEdit} sx={{ textDecoration: "none", cursor: "pointer" }}>Edit</Link>
+            <Link onClick={onDelete} sx={{ textDecoration: "none", cursor: "pointer" }}>Delete</Link>
         </Box>
     </Card>
 
